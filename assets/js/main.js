@@ -32,13 +32,13 @@
 
 
 /* ----- TYPING EFFECT ----- */
-   var typingEffect = new Typed(".typedText",{
-      strings : ["Designer","Youtuber","Developer"],
-      loop : true,
-      typeSpeed : 100, 
-      backSpeed : 80,
-      backDelay : 2000
-   })
+  var typingEffect = new Typed(".typedText",{
+  strings : ["Developer...","Frontend Developer","Techie..."],
+  loop : true,
+  typeSpeed : 150, 
+  backSpeed : 100,
+  backDelay : 2000
+})
 
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
