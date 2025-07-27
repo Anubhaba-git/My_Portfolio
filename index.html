@@ -14,6 +14,12 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <title>THE-BHAB</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("3R1iRYvKzjaNvRBZg");
+      })();
+    </script>
 </head>
 <body>
    <div class="container">
@@ -216,14 +222,14 @@
              <div class="col">
                 <div class="form-control">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
+                        <input type="text" name="from_name" class="input-field" placeholder="Your Name" required >
+                        <input type="text" name="reply_to" class="input-field" placeholder="Your Email" required >
                     </div>
                     <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea name="message" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
                     </div>
                 </div>
              </div>
