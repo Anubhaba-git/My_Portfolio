@@ -115,3 +115,29 @@
   }
 
   window.addEventListener('scroll', scrollActive)
+
+      //Email js
+    <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = this;
+
+  // Send to Admin (you)
+  emailjs.sendForm("service_d2nzmph", "template_69xqo6n", form)
+    .then(() => {
+      console.log("Email sent to Admin!");
+
+      // Send Auto-reply to User
+      emailjs.sendForm("service_d2nzmph", "template_22xj73v", form)
+        .then(() => {
+          alert("Message sent successfully! We'll get back to you shortly.");
+          form.reset();
+        }, (error) => {
+          console.error("Error in user reply:", error);
+        });
+
+    }, (error) => {
+      console.error("Error in admin email:", error);
+    });
+});
+</script>
