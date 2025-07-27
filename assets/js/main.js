@@ -115,3 +115,23 @@
   }
 
   window.addEventListener('scroll', scrollActive)
+
+// Email js
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    emailjs.sendForm("service_d2nzmph", "template_22xj73v", form)
+      .then(() => {
+        alert("Message sent successfully!");
+        form.reset(); // Clear form
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        alert("Failed to send message. Please try again!");
+      });
+  });
+});
+
