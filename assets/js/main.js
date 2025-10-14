@@ -33,7 +33,7 @@
 
 /* ----- TYPING EFFECT ----- */
   var typingEffect = new Typed(".typedText",{
-  strings : ["Developer...","Frontend Developer","Techie..."],
+  strings : ["Fullstack Developer...","Frontend Developer","React Developer","Techie..."],
   loop : true,
   typeSpeed : 150, 
   backSpeed : 100,
